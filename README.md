@@ -26,4 +26,9 @@ Example:
 
 ![Complete poster (highres)](examples/Arduino-Cheat-Sheet_v0.1_highres.png?raw=true)
 
+Changelog:
+----------
 
+v0.1:
+ * Complete A0-size poster
+ * First version: probably some typo's

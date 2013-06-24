@@ -1,18 +1,16 @@
 Arduino Cheat Sheet
 ===================
 
-"Arduino Cheat Sheet" is based on ArduinoCheatSheet by The Mechatronics Guy.
+"Arduino Cheat Sheet" gives an overview of the most important Arduino commands and syntax.
 
-https://sites.google.com/site/mechatronicsguy/arduinocheatsheet
+It is based on [ArduinoCheatSheet](https://sites.google.com/site/mechatronicsguy/arduinocheatsheet "ArduinoCheatSheet") by The Mechatronics Guy.
 
 
-Bug reports:
-------------
- * Jeroen Doggen <jeroendoggen@gmail.com>
 
 
 Example:
 --------
+Download [.pdf version](/src/Arduino-Cheat-Sheet.pdf)
 
 ### Complete poster (lowres):
 
@@ -23,13 +21,12 @@ Example:
 ![Top right corner (zoomed)](examples/Arduino-Cheat-Sheet_v0.1_zoomed.png?raw=true)
 
 
-### Complete poster (highres):
-
-![Complete poster (highres)](examples/Arduino-Cheat-Sheet_v0.1_highres.png?raw=true)
-
+Bug reports:
+------------
+ * Jeroen Doggen <jeroendoggen@gmail.com>
+ 
 Changelog:
 ----------
-
 v0.1:
  * Complete A0-size poster
  * First version: probably some typo's

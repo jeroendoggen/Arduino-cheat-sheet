@@ -20,7 +20,8 @@ Example:
 
 ### Top right corner (zoomed):
 
-![Top right corner (zoomed)](screenshots/Arduino-Cheat-Sheet_v0.1_zoomed.png?raw=true)
+![Top right corner (zoomed)](examples/Arduino-Cheat-Sheet_v0.1_zoomed.png?raw=true)
+
 
 ### Complete poster (highres):
 

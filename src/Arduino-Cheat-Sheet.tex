@@ -209,8 +209,8 @@
 \headerbox{Further Syntax}{name=further_syntax,column=0,below=control_stuctures}{
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \begin{tabular}{l l}
-    \textbf{//} &  Single line comment \\
-    \textbf{/*..*/} & Multi line comment \\
+    \textbf{$//$} &  Single line comment \\
+    \textbf{$/*..*/$} & Multi line comment \\
   \end{tabular}
   \vspace{3pt}
   \begin{tabular}{l}
@@ -224,11 +224,11 @@
 \headerbox{General Operators}{name=general_operators,column=0,below=further_syntax}{
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \begin{tabular}{l l}
-    \textbf{$=$} &  assignment operator \\
-    \textbf{$+$} & addition \\
-    \textbf{$*$} &  multiplication \\
+    \textbf{$=$} &  assignment \\
+    \textbf{$+,$ \hspace{2pt} $ - $} & addition, substraction \\
+    \textbf{$*,$ \hspace{2pt} $ /$} &  multiplication, division \\
     \textbf{$\%$} & modulo \\
-    \textbf{$==$} &  equal to \\
+    \textbf{$==,$ \hspace{2pt} $!=$} &  equal to, not equal to \\
     \textbf{$<$} & less than \\
     \textbf{$<=$} &  less than or equal to \\
   \end{tabular}
@@ -236,7 +236,7 @@
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\headerbox{Pointer Acces}{name=pointers,column=0,below=general_operators}{
+\headerbox{Pointer Access}{name=pointers,column=0,below=general_operators}{
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \begin{tabular}{l l}
     \textbf{$\&$} &  reference operator \\
@@ -281,7 +281,7 @@
     \texttt{true, false}  
     \vspace{3pt}\\
     53 : Decimal  \\
-    0b11010101 : Binary  \\
+    B11010101 : Binary  \\
     0x5BA4 : Hexadecimal  \\
   \end{tabular}
 }
@@ -352,6 +352,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \begin{tabular}{l}
     \textbf{attachInterrupt}(interrupt, function, type)  \\
+    \textbf{detachInterrupt}(interrupt)  \\
     \textbf{boolean}(interrupt)  \\
     \textbf{interrupts}()  \\
     \textbf{noInterrupts}()  \\
@@ -409,7 +410,7 @@
 \headerbox{Seeeduino Board}{name=seeeduino,column=2,below=random,bottomaligned=compound}{
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \begin{center}
-    \includegraphics[width=0.9\textwidth]{./images/seeeduino3.jpg}
+    \includegraphics[width=0.82\textwidth]{./images/seeeduino3.jpg}
   \end{center}
 }
 

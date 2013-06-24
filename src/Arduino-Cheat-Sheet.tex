@@ -14,6 +14,7 @@
 
 \usepackage{graphicx}
 \usepackage{multicol}
+\usepackage{url}
 
 \usepackage{pgfbaselayers}
 \pgfdeclarelayer{background}
@@ -182,7 +183,6 @@
     void \textbf{setup}()   \\
     void \textbf{loop}() \\
   \end{tabular}
-  \vspace{1pt}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -193,7 +193,6 @@
     \texttt{\textbf{for}(int i = 0; i < 255 i++ )\{\}} \\
     \texttt{\textbf{while}((x < 6 )\{\}} \\
   \end{tabular}
-  \vspace{1pt}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -208,7 +207,6 @@
     \#define ANSWER 42  \\
     \#include <myLib.h> \\
   \end{tabular}
-  \vspace{1pt}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -219,11 +217,11 @@
     \textbf{$+,$ \hspace{2pt} $ - $} & addition, substraction \\
     \textbf{$*,$ \hspace{2pt} $ /$} &  multiplication, division \\
     \textbf{$\%$} & modulo \\
-    \textbf{$==,$ \hspace{2pt} $!=$} &  equal to, not equal to \\
+    \textbf{$==$} & equal to \\
+    \textbf{$!=$} & not equal to \\
     \textbf{$<$} & less than \\
     \textbf{$<=$} &  less than or equal to \\
   \end{tabular}
-  \vspace{1pt}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -233,7 +231,6 @@
     \textbf{$\&$} &  reference operator \\
     \textbf{$*$} & dereference operator \\
   \end{tabular}
-  \vspace{1pt}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -245,7 +242,6 @@
     \textbf{$\wedge$} & bitwise XOR \\
     \textbf{$\sim$} & bitwise NOT\\
   \end{tabular}
-  \vspace{1pt}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -258,7 +254,7 @@
     \textbf{$\&=$} & Compound bitwise AND\\
   \end{tabular}
   %% OTHER COLUMS FOLLOW THIS COLUMN (bottom alignment)!!
-  \vspace{20pt}
+  \vspace{9pt}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -282,7 +278,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \begin{tabular}{l l}
     \textbf{void} & \\
-    \textbf{boolean} & 0, 1, false, true)  \\
+    \textbf{boolean} & 0, 1, false, true  \\
     \textbf{char} & e.g. 'a' -128 $\rightarrow$ 127  \\
     \textbf{unsigned char} & 0 $\rightarrow$ 255 \\
     \textbf{int} & -32.768 $\rightarrow$ 32.767  \\
@@ -308,7 +304,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \begin{tabular}{l}
     char S1[15];  \\
-    char S2[8]={'A','r','d','u','i','n','o};  \\
+    char S2[8]={'A','r','d','u','i','n','o'};  \\
     char S3[8]={'A','r','d','u','i','n','o','$\backslash$0'};  \\
     char S4[]=``Arduino'';  \\
     char S5[8] = ``Arduino'';  \\
@@ -384,6 +380,7 @@
   \begin{tabular}{l}
     \textbf{pow}(base, exponent)  \\
     \textbf{map}(val, fromL, fromH, toL, toH) \\
+    \textbf{constrain}(val, fromL, toH) \\
   \end{tabular}
 }
 
@@ -398,10 +395,10 @@
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\headerbox{Seeeduino Board}{name=seeeduino,column=2,below=random,bottomaligned=compound}{
+\headerbox{ATmega328 Pinout}{name=pinout,column=2,below=random,bottomaligned=compound}{
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \begin{center}
-    \includegraphics[width=0.82\textwidth]{./images/seeeduino3.jpg}
+    \includegraphics[height=0.1655\textheight]{./images/ArduinoImages6.pdf}
   \end{center}
 }
 
@@ -448,20 +445,31 @@
 \headerbox{Serial Communication}{name=serial,column=3,below=digital}{
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \begin{tabular}{l}
-    \texttt{\textbf{Serial.begin}(speed)}  \\
-    \texttt{\textbf{Serial.print}(``Text'')}  \\
-    \texttt{int \textbf{Serial.println}(``Text'')}  \\
+    \textbf{Serial.begin}(speed)  \\
+    \textbf{Serial.print}(``Text'')  \\
+    \textbf{Serial.println}(``Text'')  \\
   \end{tabular}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\headerbox{Pinout \& Headers}{name=pins,column=3,below=serial,bottomaligned=compound}{
+\headerbox{Websites}{name=websites,column=3,below=serial}{
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \begin{tabular}{l}
+    \url{forum.arduino.cc}    \\
+    \url{playground.arduino.cc} \\
+    \url{arduino.cc/en/Reference}  \\
+  \end{tabular}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\headerbox{Arduino Uno Board}{name=board,column=3,below=websites,bottomaligned=compound}{
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \begin{center}
-    % \includegraphics[width=0.8\textwidth]{./images/arduino3.png}
-    \includegraphics[height=0.335\textheight]{./images/ArduinoImages4.png}
+    \includegraphics[width=0.95\textwidth]{./images/ArduinoUno_R3_Front.jpg}
   \end{center}
 }
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{poster}

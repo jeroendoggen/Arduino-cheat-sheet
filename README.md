@@ -11,7 +11,7 @@ All the information is based on the [Arduino Language Reference website.](http:/
 
 Example:
 --------
-Download [.pdf version](/src/Arduino-Cheat-Sheet.pdf)
+Download [.pdf version](https://github.com/jeroendoggen/Arduino-cheat-sheet/blob/master/src/Arduino-Cheat-Sheet.pdf?raw=true)
 
 ### Complete poster (lowres):
 

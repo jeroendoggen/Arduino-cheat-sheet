@@ -108,12 +108,9 @@
 
 \newlength{\leftimgwidth}
 \begin{poster}%
-  % Poster Options
   {
-  % Show grid to help with alignment
-  grid=false,
-  % Column spacing
-  colspacing=1em,
+  grid=false, % Show grid to help with alignment
+  colspacing=1em, % Column spacing
   % Color style
   bgColorOne=white,
   bgColorTwo=lightestyellow,
@@ -125,16 +122,16 @@
   boxColorTwo=lighteryellow,
   % Format of textbox
   textborder=roundedleft,
-%  textborder=rectangle,
+  % textborder=rectangle,
   % Format of text header
   eyecatcher=true,
   headerborder=open,
   headerheight=0.1\textheight,
   headershape=roundedright,
   headershade=plain,
-  headerfont=\LARGE\textsf, %Sans Serif
+  headerfont=\Large\textsf, %Sans Serif
   boxshade=plain,
-%  background=shade-tb,
+ %  background=shade-tb,
   background=plain,
   linewidth=2pt
   }
@@ -150,18 +147,12 @@
   {\sf %Sans Serif
   % Serif
   \vspace{0.05em}
-  \textsc{AP University College Antwerp}
+  \textsc{Jeroen Doggen, AP University College Antwerp}
 
-  Jeroen Doggen
+
   }
-  % University logo
-  {% The makebox allows the title to flow into the logo, this is a hack because of the L shaped logo.
-    \makebox[8em][r]{%
-      \begin{minipage}{40em}
-        \hfill
-        \includegraphics[height=5em]{AP.png}
-      \end{minipage}
-    }
+  {
+    \includegraphics[height=5em]{AP.png} % University logo
   }
 
   \tikzstyle{light shaded}=[top color=baposterBGtwo!30!white,bottom color=baposterBGone!30!white,shading=axis,shading angle=30]

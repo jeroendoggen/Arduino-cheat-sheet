@@ -1,11 +1,12 @@
 Arduino Cheat Sheet
 ===================
 
-"Arduino Cheat Sheet" gives an overview of the most important Arduino commands and syntax.
+"Arduino Cheat Sheet" is a poster that gives an overview of the most important Arduino commands and syntax.
 
 It is based on [ArduinoCheatSheet](https://sites.google.com/site/mechatronicsguy/arduinocheatsheet "ArduinoCheatSheet") by The Mechatronics Guy.
 
-
+The poster is created with Brian Amberg's [baposter LaTeX poster style](http://www.brian-amberg.de/uni/poster/ "baposter LaTeX poster style"). 
+All the information is based on the [Arduino Language Reference website.](http://arduino.cc/en/Reference/HomePage "Arduino Language Reference website").
 
 
 Example:

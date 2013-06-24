@@ -151,7 +151,7 @@
   % Serif
   \vspace{0.05em}
   \textsc{AP University College Antwerp}
-  
+
   Jeroen Doggen
   }
   % University logo
@@ -185,277 +185,240 @@
       \tikz{\useasboundingbox (-0.2em,-0.32em) rectangle(0.2em,0.32em); \draw[draw=black,fill=baposterBGone!80!black!#1!white,line width=0.03em] (0,0) circle(0.18em);}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  \headerbox{Structure}{name=structure,column=0,row=0}{
+\headerbox{Structure}{name=structure,column=0,row=0}{
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{tabular}{l}
-void \textbf{setup}()   \\
-void \textbf{loop}() \\
-\end{tabular}
-\vspace{1pt}
- }
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  \headerbox{Control Structures}{name=control_stuctures,column=0,below=structure}{
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{tabular}{l}
-\texttt{\textbf{if}(x<5)\{\}}  \\
-\texttt{\textbf{for}(int i = 0; i < 255 i++ )\{\}} \\
-\texttt{\textbf{while}((x < 6 )\{\}} \\
-\end{tabular}
-\vspace{1pt}
+  \begin{tabular}{l}
+    void \textbf{setup}()   \\
+    void \textbf{loop}() \\
+  \end{tabular}
+  \vspace{1pt}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  \headerbox{Further Syntax}{name=further_syntax,column=0,below=control_stuctures}{
+\headerbox{Control Structures}{name=control_stuctures,column=0,below=structure}{
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{tabular}{l l}
-\textbf{//} &  Single line comment \\
-\textbf{/*..*/} & Multi line comment \\
-\end{tabular}
-
-\vspace{3pt}
-
-\begin{tabular}{l}
-\#define ANSWER 42  \\
-\#include <myLib.h> \\
-\end{tabular}
-
-\vspace{1pt}
+  \begin{tabular}{l}
+    \texttt{\textbf{if}(x<5)\{\}}  \\
+    \texttt{\textbf{for}(int i = 0; i < 255 i++ )\{\}} \\
+    \texttt{\textbf{while}((x < 6 )\{\}} \\
+  \end{tabular}
+  \vspace{1pt}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  \headerbox{General Operators}{name=general_operators,column=0,below=further_syntax}{
+\headerbox{Further Syntax}{name=further_syntax,column=0,below=control_stuctures}{
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{tabular}{l l}
-\textbf{$=$} &  assignment operator \\
-\textbf{$+$} & addition \\
-\textbf{$*$} &  multiplication \\
-\textbf{$\%$} & modulo \\
-\textbf{$==$} &  equal to \\
-\textbf{$<$} & less than \\
-\textbf{$<=$} &  less than or equal to \\
-\end{tabular}
-
-\vspace{1pt}
+  \begin{tabular}{l l}
+    \textbf{//} &  Single line comment \\
+    \textbf{/*..*/} & Multi line comment \\
+  \end{tabular}
+  \vspace{3pt}
+  \begin{tabular}{l}
+    \#define ANSWER 42  \\
+    \#include <myLib.h> \\
+  \end{tabular}
+  \vspace{1pt}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  \headerbox{Pointer Acces}{name=pointers,column=0,below=general_operators}{
+\headerbox{General Operators}{name=general_operators,column=0,below=further_syntax}{
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{tabular}{l l}
-\textbf{$\&$} &  reference operator \\
-\textbf{$*$} & dereference operator \\
-\end{tabular}
-
-\vspace{1pt}
+  \begin{tabular}{l l}
+    \textbf{$=$} &  assignment operator \\
+    \textbf{$+$} & addition \\
+    \textbf{$*$} &  multiplication \\
+    \textbf{$\%$} & modulo \\
+    \textbf{$==$} &  equal to \\
+    \textbf{$<$} & less than \\
+    \textbf{$<=$} &  less than or equal to \\
+  \end{tabular}
+  \vspace{1pt}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  \headerbox{Bitwise Operators}{name=bitwise,column=0,below=pointers}{
+\headerbox{Pointer Acces}{name=pointers,column=0,below=general_operators}{
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \begin{tabular}{l l}
+    \textbf{$\&$} &  reference operator \\
+    \textbf{$*$} & dereference operator \\
+  \end{tabular}
+  \vspace{1pt}
+}
 
-\begin{tabular}{l l}
-\textbf{$\&$} &  bitwise AND \\
-\textbf{$|$} & bitwise OR \\
-\textbf{$\wedge$} & bitwise XOR \\
-\textbf{$\sim$} & bitwise NOT\\
-\end{tabular}
-
-\vspace{1pt}
-  }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\headerbox{Bitwise Operators}{name=bitwise,column=0,below=pointers}{
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \begin{tabular}{l l}
+    \textbf{$\&$} &  bitwise AND \\
+    \textbf{$|$} & bitwise OR \\
+    \textbf{$\wedge$} & bitwise XOR \\
+    \textbf{$\sim$} & bitwise NOT\\
+  \end{tabular}
+  \vspace{1pt}
+}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  \headerbox{Compound Operators}{name=compound,column=0,below=bitwise}{
+\headerbox{Compound Operators}{name=compound,column=0,below=bitwise}{
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{tabular}{l l}
-\textbf{$++$} &  Increment\\
-\textbf{$--$} & Decrement \\
-\textbf{$+=$} & Compound addition \\
-\textbf{$\&=$} & Compound bitwise AND\\
-\end{tabular}
-
-%% OTHER COLUMS FOLLOW THIS COLUMN!!
-\vspace{20pt}
+  \begin{tabular}{l l}
+    \textbf{$++$} &  Increment\\
+    \textbf{$--$} & Decrement \\
+    \textbf{$+=$} & Compound addition \\
+    \textbf{$\&=$} & Compound bitwise AND\\
+  \end{tabular}
+  %% OTHER COLUMS FOLLOW THIS COLUMN (bottom alignment)!!
+  \vspace{20pt}
 }
-  
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% COLUMN 2 STARTS HERE
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-  \headerbox{Constants}{name=constants,column=1}{
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{tabular}{l}
-\texttt{HIGH, LOW} \\
-\texttt{INPUT, OUTPUT}  \\
-\texttt{true, false}  
-\vspace{3pt}\\
-53 : Decimal  \\
-0b11010101 : Binary  \\
-0x5BA4 : Hexadecimal  \\
-\end{tabular}
-}
-  
+\headerbox{Constants}{name=constants,column=1}{
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  \headerbox{Data Types}{name=data_types,column=1,below=constants}{
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{tabular}{l l}
-\textbf{void} & \\
-\textbf{boolean} & 0, 1, false, true)  \\
-\textbf{char} & e.g. 'a' -128 $\rightarrow$ 127  \\
-\textbf{unsigned char} & 0 $\rightarrow$ 255 \\
-\textbf{int} & -32.768 $\rightarrow$ 32.767  \\
-\textbf{unsigned int} & 0 $\rightarrow$ 65535  \\
-\textbf{long} & -2.147.483.648 $\rightarrow$ 2.147.483.647  \\
-\textbf{float} & -3,4028235E+38 $\rightarrow$ 3.402835E+38  \\
-\textbf{sizeof} (myint) & returns 2 bytes  \\
-\end{tabular}
-
-
-
-  }
-  
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  \headerbox{Arrays}{name=strings,column=1,below=data_types}{
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{tabular}{l}
-char S1[15];  \\
-char S2[8]={'A','r','d','u','i','n','o};  \\
-char S3[8]={'A','r','d','u','i','n','o','$\backslash$0'};  \\
-char S4[]=``Arduino'';  \\
-char S5[8] = ``Arduino'';  \\
-char S6[15] = ``Arduino'';  \\
-\end{tabular}
-
-
-  }
-  
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  \headerbox{Arrays}{name=arrays,column=1,below=strings}{
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{tabular}{l}
-int myInts[6];  \\
-int myPins[]={2,4,8,5,6};  \\
-int myVals[6]={2,-4,9,3,5};  \\
-\end{tabular}
-
-}
-  
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  \headerbox{Conversion}{name=conversion,column=1,below=arrays}{
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{tabular}{l l l}
- \textbf{char()} & \textbf{int()} &  \textbf{long()}\\
- \textbf{byte()} & \textbf{word} &  \textbf{float}\\    
-\end{tabular}
+  \begin{tabular}{l}
+    \texttt{HIGH, LOW} \\
+    \texttt{INPUT, OUTPUT}  \\
+    \texttt{true, false}  
+    \vspace{3pt}\\
+    53 : Decimal  \\
+    0b11010101 : Binary  \\
+    0x5BA4 : Hexadecimal  \\
+  \end{tabular}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  \headerbox{Qualifiers}{name=qualifiers,column=1,below=conversion,bottomaligned=compound}{
+\headerbox{Data Types}{name=data_types,column=1,below=constants}{
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{tabular}{l l}
-\textbf{static} &  Persist between calls\\
-\textbf{volatile} & Use RAM (nice for ISR) \\
-\textbf{const} & Mark read-only \\
-\textbf{PROGMEM} & Use flash memory\\
-\end{tabular}
+  \begin{tabular}{l l}
+    \textbf{void} & \\
+    \textbf{boolean} & 0, 1, false, true)  \\
+    \textbf{char} & e.g. 'a' -128 $\rightarrow$ 127  \\
+    \textbf{unsigned char} & 0 $\rightarrow$ 255 \\
+    \textbf{int} & -32.768 $\rightarrow$ 32.767  \\
+    \textbf{unsigned int} & 0 $\rightarrow$ 65535  \\
+    \textbf{long} & -2.147.483.648 $\rightarrow$ 2.147.483.647  \\
+    \textbf{float} & -3,4028235E+38 $\rightarrow$ 3.402835E+38  \\
+    \textbf{sizeof} (myint) & returns 2 bytes  \\
+  \end{tabular}
 }
- 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\headerbox{Arrays}{name=arrays,column=1,below=data_types}{
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \begin{tabular}{l}
+    int myInts[6];  \\
+    int myPins[]={2,4,8,5,6};  \\
+    int myVals[6]={2,-4,9,3,5};  \\
+  \end{tabular}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\headerbox{Strings}{name=strings,column=1,below=arrays}{
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \begin{tabular}{l}
+    char S1[15];  \\
+    char S2[8]={'A','r','d','u','i','n','o};  \\
+    char S3[8]={'A','r','d','u','i','n','o','$\backslash$0'};  \\
+    char S4[]=``Arduino'';  \\
+    char S5[8] = ``Arduino'';  \\
+    char S6[15] = ``Arduino'';  \\
+  \end{tabular}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\headerbox{Conversion}{name=conversion,column=1,below=strings}{
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \begin{tabular}{l l l}
+    \textbf{char()} & \textbf{int()} &  \textbf{long()}\\
+    \textbf{byte()} & \textbf{word()} &  \textbf{float()}\\
+  \end{tabular}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\headerbox{Qualifiers}{name=qualifiers,column=1,below=conversion,bottomaligned=compound}{
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \begin{tabular}{l l}
+    \textbf{static} &  Persist between calls\\
+    \textbf{volatile} & Use RAM (nice for ISR) \\
+    \textbf{const} & Mark read-only \\
+    \textbf{PROGMEM} & Use flash memory\\
+  \end{tabular}
+}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% COLUMN 2 STARTS HERE
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-  \headerbox{Interrupts}{name=interrupts,column=2}{
+\headerbox{Interrupts}{name=interrupts,column=2}{
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{tabular}{l}
-\textbf{attachInterrupt}(interrupt, function, type)  \\
-\textbf{boolean}(interrupt)  \\
-\textbf{interrupts}()  \\
-\textbf{noInterrupts}()  \\
-\end{tabular}
-
+  \begin{tabular}{l}
+    \textbf{attachInterrupt}(interrupt, function, type)  \\
+    \textbf{boolean}(interrupt)  \\
+    \textbf{interrupts}()  \\
+    \textbf{noInterrupts}()  \\
+  \end{tabular}
 }
-  
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \headerbox{Advanced I/O}{name=advanced_io,column=2,below=interrupts}{
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{tabular}{l}
-\textbf{tone}(pin, freqhz)  \\
-\textbf{tone}(pin, freqhz, duration\_ms)  \\
-\textbf{noTone}(pin)  \\
-\textbf{shiftOut} (dataPin, clockPin, how, value)  \\
-unsigned long \textbf{pulseIn}(pin, [HIGH,LOW])  \\
-\end{tabular}
-
-
+  \begin{tabular}{l}
+    \textbf{tone}(pin, freqhz)  \\
+    \textbf{tone}(pin, freqhz, duration\_ms)  \\
+    \textbf{noTone}(pin)  \\
+    \textbf{shiftOut} (dataPin, clockPin, how, value)  \\
+    unsigned long \textbf{pulseIn}(pin, [HIGH,LOW])  \\
+  \end{tabular}
 }
-  
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  \headerbox{Time}{name=time,column=2,below=advanced_io}{
+\headerbox{Time}{name=time,column=2,below=advanced_io}{
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{tabular}{l l}
-unsigned long \textbf{millis()} &  50 days overflow\\
-unsigned long \textbf{micros()}  & 70 min overflow \\
-\textbf{delay}(ms) &  \\
-\textbf{delayMicroseconds}(us) & \\
-\end{tabular}
+  \begin{tabular}{l l}
+    unsigned long \textbf{millis()} &  50 days overflow\\
+    unsigned long \textbf{micros()}  & 70 min overflow \\
+    \textbf{delay}(ms) &  \\
+    \textbf{delayMicroseconds}(us) & \\
+  \end{tabular}
 }
-  
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  \headerbox{Math}{name=math,column=2,below=time}{
+\headerbox{Math}{name=math,column=2,below=time}{
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \begin{tabular}{l l l}
+    \textbf{min}(x,y) & \textbf{max}(x,y) & \textbf{abs}(x) \\
+    \textbf{sin}(rad) & \textbf{cos}(rad) & \textbf{tan}(rad) \\
+  \end{tabular}
 
-\begin{tabular}{l l l}
-\textbf{min}(x,y) & \textbf{max}(x,y) & \textbf{abs}(x) \\
-\textbf{sin}(rad) & \textbf{cos}(rad) & \textbf{tan}(rad) \\
-\end{tabular}
-
-\begin{tabular}{l}
-  \textbf{pow}(base, exponent)  \\
-  \textbf{map}(val, fromL, fromH, toL, toH) \\
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\end{tabular}
+  \begin{tabular}{l}
+    \textbf{pow}(base, exponent)  \\
+    \textbf{map}(val, fromL, fromH, toL, toH) \\
+  \end{tabular}
 }
-  
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \headerbox{Pseudo Random Numbers}{name=random,column=2,below=math}{
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{tabular}{l}
-\textbf{randomSeed}(seed)  \\
-long \textbf{random}(max)  \\
-long \textbf{random}(min, max)  \\
-\end{tabular}
+  \begin{tabular}{l}
+    \textbf{randomSeed}(seed)  \\
+    long \textbf{random}(max)  \\
+    long \textbf{random}(min, max)  \\
+  \end{tabular}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  \headerbox{Seeeduino Board}{name=seeeduino,column=2,below=random,bottomaligned=compound}{
+\headerbox{Seeeduino Board}{name=seeeduino,column=2,below=random,bottomaligned=compound}{
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{center}
-\includegraphics[width=0.9\textwidth]{./images/seeeduino3.jpg}
-\end{center}
+  \begin{center}
+    \includegraphics[width=0.9\textwidth]{./images/seeeduino3.jpg}
+  \end{center}
 }
-  
 
-%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% COLUMN 3 STARTS HERE
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\headerbox{I/O Pins}{name=pins,column=3}{
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  \headerbox{I/O Pins}{name=pins,column=3}{
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{center}
   \begin{tabular}{l l l}
     & \textbf{Uno} &  \textbf{Mega}\\
@@ -472,47 +435,45 @@ long \textbf{random}(min, max)  \\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \headerbox{Analog I/O}{name=analog,column=3,below=pins}{
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{tabular}{l}
-\texttt{\textbf{analogReference}(\texttt{EXTERNAL, INTERNAL})}  \\
-\texttt{\textbf{analogRead}(pin)}  \\
-\texttt{\textbf{analogWrite}(pin)}  \\
-\end{tabular}
+  \begin{tabular}{l}
+    \texttt{\textbf{analogReference}(\texttt{EXTERNAL, INTERNAL})}  \\
+    \texttt{\textbf{analogRead}(pin)}  \\
+    \texttt{\textbf{analogWrite}(pin)}  \\
+  \end{tabular}
 }
-  
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  \headerbox{Digital I/O}{name=digital,column=3,below=analog}{
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{tabular}{l}
-\texttt{\textbf{pinMode}(pin,[\texttt{INPUT,OUTPUT}])}  \\
-\texttt{\textbf{digitalWrite}(pin, value)}  \\
-\texttt{int \textbf{analogRead}(pin)}  \\
-\end{tabular}
-}
-  
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  \headerbox{Serial Communication}{name=serial,column=3,below=digital}{
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{tabular}{l}
-\texttt{\textbf{Serial.begin}(speed)}  \\
-\texttt{\textbf{Serial.print}(``Text'')}  \\
-\texttt{int \textbf{Serial.println}(``Text'')}  \\
-\end{tabular}
-}
-  
- 
-  
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  \headerbox{Pinout \& Headers}{name=pins,column=3,below=serial,bottomaligned=compound}{
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{center}
-% \includegraphics[width=0.8\textwidth]{./images/arduino3.png}
-\includegraphics[height=0.335\textheight]{./images/ArduinoImages4.png}
-\end{center}
-}
-  
 
-  
-  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\headerbox{Digital I/O}{name=digital,column=3,below=analog}{
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \begin{tabular}{l}
+    \texttt{\textbf{pinMode}(pin,[\texttt{INPUT,OUTPUT}])}  \\
+    \texttt{\textbf{digitalWrite}(pin, value)}  \\
+    \texttt{int \textbf{analogRead}(pin)}  \\
+  \end{tabular}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\headerbox{Serial Communication}{name=serial,column=3,below=digital}{
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \begin{tabular}{l}
+    \texttt{\textbf{Serial.begin}(speed)}  \\
+    \texttt{\textbf{Serial.print}(``Text'')}  \\
+    \texttt{int \textbf{Serial.println}(``Text'')}  \\
+  \end{tabular}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\headerbox{Pinout \& Headers}{name=pins,column=3,below=serial,bottomaligned=compound}{
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \begin{center}
+    % \includegraphics[width=0.8\textwidth]{./images/arduino3.png}
+    \includegraphics[height=0.335\textheight]{./images/ArduinoImages4.png}
+  \end{center}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{poster}
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

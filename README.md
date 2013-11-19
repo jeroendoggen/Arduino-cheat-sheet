@@ -1,6 +1,4 @@
-Arduino Cheat Sheet
-===================
-
+# Arduino Cheat Sheet
 "Arduino Cheat Sheet" is a poster that gives an overview of the most important Arduino commands and syntax.
 
 It is based on [ArduinoCheatSheet](https://sites.google.com/site/mechatronicsguy/arduinocheatsheet "ArduinoCheatSheet") by The Mechatronics Guy.
@@ -8,9 +6,7 @@ It is based on [ArduinoCheatSheet](https://sites.google.com/site/mechatronicsguy
 The poster is created with Brian Amberg's [baposter LaTeX poster style](http://www.brian-amberg.de/uni/poster/ "baposter LaTeX poster style"). 
 All the information is based on the [Arduino Language Reference website.](http://arduino.cc/en/Reference/HomePage "Arduino Language Reference website").
 
-
-Example:
---------
+## Example:
 Download [.pdf version](https://github.com/jeroendoggen/Arduino-cheat-sheet/blob/master/src/Arduino-Cheat-Sheet.pdf?raw=true)
 
 ### Complete poster (lowres):
@@ -21,13 +17,5 @@ Download [.pdf version](https://github.com/jeroendoggen/Arduino-cheat-sheet/blob
 
 ![Top right corner (zoomed)](examples/Arduino-Cheat-Sheet_v0.1_zoomed.png?raw=true)
 
-
-Bug reports:
-------------
- * Jeroen Doggen <jeroendoggen@gmail.com>
- 
-Changelog:
-----------
-v0.1:
- * Complete A0-size poster
- * First version: probably some typo's
+## Bug reports:
+ * Github issue tracker or Jeroen Doggen <jeroendoggen@gmail.com>

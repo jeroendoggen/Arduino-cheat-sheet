@@ -32,9 +32,8 @@
 
 \graphicspath{{images/}}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%% Some math symbols used in the text
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Some math symbols used in the text
+
 % Format 
 \newcommand{\Matrix}[1]{\begin{bmatrix} #1 \end{bmatrix}}
 \newcommand{\Vector}[1]{\Matrix{#1}}
@@ -49,16 +48,16 @@
 \def\norm#1{\mathopen\| #1 \mathclose\|}% use instead of $\|x\|$
 \newcommand{\normLR}[1]{\left\| #1 \right\|}% use instead of $\|x\|$
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%
 % Multicol Settings
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%
 \setlength{\columnsep}{0.72em}
 \setlength{\columnseprule}{0mm}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%
 % Save space in lists. Use this after the opening of the list
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%
 \newcommand{\compresslist}{%
 \setlength{\itemsep}{1pt}%
 \setlength{\parskip}{0pt}%
@@ -66,17 +65,17 @@
 }
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 %%% Begin of Document
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 
 \begin{document}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% Here starts the poster
-%%%---------------------------------------------------------------------------
-%%% Format it to your taste with the options
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Here starts the poster
+%%---------------------------------------------------------------------------
+%% Format it to your taste with the options
+
 % Define some colors
 \definecolor{white}{cmyk}{0,0,0,0}
 \definecolor{silver}{cmyk}{0,0,0,0.3}
@@ -98,17 +97,16 @@
 
 \definecolor{APDarkRed}{RGB}{176,20,25}
 \definecolor{APLightRed}{RGB}{237,28,36}
-%%
 
 \typeout{Poster Starts}
 \background{
   \begin{tikzpicture}[remember picture,overlay]%
     \draw (current page.north west)+(-2em,2em) node[anchor=north west] {\includegraphics[height=1.1\textheight]{silhouettes_background}};
-  \end{tikzpicture}%
+  \end{tikzpicture}
 }
 
 \newlength{\leftimgwidth}
-\begin{poster}%
+\begin{poster}
   {
   grid=false, % Show grid to help with alignment
   colspacing=1em, % Column spacing
@@ -161,33 +159,27 @@
   % Width of left inset image
      \setlength{\leftimgwidth}{0.78em+8.0em}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% Now define the boxes that make up the poster
-%%%---------------------------------------------------------------------------
-%%% Each box has a name and can be placed absolutely or relatively.
-%%% The only inconvenience is that you can only specify a relative position 
-%%% towards an already declared box. So if you have a box attached to the 
-%%% bottom, one to the top and a third one which should be in between, you 
-%%% have to specify the top and bottom boxes before you specify the middle 
-%%% box.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    %
+
+% Now define the boxes that make up the poster
+%---------------------------------------------------------------------------
+% Each box has a name and can be placed absolutely or relatively.
+% The only inconvenience is that you can only specify a relative position 
+% towards an already declared box. So if you have a box attached to the 
+% bottom, one to the top and a third one which should be in between, you 
+% have to specify the top and bottom boxes before you specify the middle 
+% box.
     % A coloured circle useful as a bullet with an adjustably strong filling
     \newcommand{\colouredcircle}[1]{%
       \tikz{\useasboundingbox (-0.2em,-0.32em) rectangle(0.2em,0.32em); \draw[draw=black,fill=baposterBGone!80!black!#1!white,line width=0.03em] (0,0) circle(0.18em);}}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \headerbox{Structure}{name=structure,column=0,row=0}{
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \begin{tabular}{l}
     void \textbf{setup}()   \\
     void \textbf{loop}() \\
   \end{tabular}
 }
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \headerbox{Control Structures}{name=control_stuctures,column=0,below=structure}{
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \begin{tabular}{l}
     \texttt{\textbf{if}(x<5)\{\}}  \\
     \texttt{\textbf{for}(int i = 0; i < 255; i++ )\{\}} \\
@@ -195,9 +187,7 @@
   \end{tabular}
 }
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \headerbox{Further Syntax}{name=further_syntax,column=0,below=control_stuctures}{
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \begin{tabular}{l l}
     \textbf{$//$} &  Single line comment \\
     \textbf{$/*..*/$} & Multi line comment \\
@@ -209,9 +199,7 @@
   \end{tabular}
 }
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \headerbox{General Operators}{name=general_operators,column=0,below=further_syntax}{
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \begin{tabular}{l l}
     \textbf{$=$} &  assignment \\
     \textbf{$+,$ \hspace{2pt} $ - $} & addition, substraction \\
@@ -224,18 +212,14 @@
   \end{tabular}
 }
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \headerbox{Pointer Access}{name=pointers,column=0,below=general_operators}{
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \begin{tabular}{l l}
     \textbf{$\&$} &  reference operator \\
     \textbf{$*$} & dereference operator \\
   \end{tabular}
 }
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \headerbox{Bitwise Operators}{name=bitwise,column=0,below=pointers}{
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \begin{tabular}{l l}
     \textbf{$\&$} &  bitwise AND \\
     \textbf{$|$} & bitwise OR \\
@@ -244,9 +228,8 @@
   \end{tabular}
 }
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \headerbox{Compound Operators}{name=compound,column=0,below=bitwise}{
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \begin{tabular}{l l}
     \textbf{$++$} &  Increment\\
     \textbf{$--$} & Decrement \\
@@ -257,11 +240,9 @@
   \vspace{9pt}
 }
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 %% COLUMN 2 STARTS HERE
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \headerbox{Constants}{name=constants,column=1}{
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \begin{tabular}{l}
     \texttt{HIGH, LOW} \\
     \texttt{INPUT, OUTPUT}  \\
@@ -273,9 +254,7 @@
   \end{tabular}
 }
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \headerbox{Data Types}{name=data_types,column=1,below=constants}{
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \begin{tabular}{l l}
     \textbf{void} & \\
     \textbf{boolean} & 0, 1, false, true  \\
@@ -289,9 +268,7 @@
   \end{tabular}
 }
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \headerbox{Arrays}{name=arrays,column=1,below=data_types}{
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \begin{tabular}{l}
     int myInts[6];  \\
     int myPins[]={2,4,8,5,6};  \\
@@ -299,9 +276,7 @@
   \end{tabular}
 }
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \headerbox{Strings}{name=strings,column=1,below=arrays}{
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \begin{tabular}{l}
     char S1[15];  \\
     char S2[8]={'A','r','d','u','i','n','o'};  \\
@@ -312,18 +287,14 @@
   \end{tabular}
 }
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \headerbox{Conversion}{name=conversion,column=1,below=strings}{
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \begin{tabular}{l l l}
     \textbf{char()} & \textbf{int()} &  \textbf{long()}\\
     \textbf{byte()} & \textbf{word()} &  \textbf{float()}\\
   \end{tabular}
 }
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \headerbox{Qualifiers}{name=qualifiers,column=1,below=conversion,bottomaligned=compound}{
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \begin{tabular}{l l}
     \textbf{static} &  Persist between calls\\
     \textbf{volatile} & Use RAM (nice for ISR) \\
@@ -332,11 +303,8 @@
   \end{tabular}
 }
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% COLUMN 2 STARTS HERE
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% COLUMN 3 STARTS HERE
 \headerbox{Interrupts}{name=interrupts,column=2}{
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \begin{tabular}{l}
     \textbf{attachInterrupt}(interrupt, function, type)  \\
     \textbf{detachInterrupt}(interrupt)  \\
@@ -346,9 +314,7 @@
   \end{tabular}
 }
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \headerbox{Advanced I/O}{name=advanced_io,column=2,below=interrupts}{
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \begin{tabular}{l}
     \textbf{tone}(pin, freqhz)  \\
     \textbf{tone}(pin, freqhz, duration\_ms)  \\
@@ -358,9 +324,7 @@
   \end{tabular}
 }
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \headerbox{Time}{name=time,column=2,below=advanced_io}{
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \begin{tabular}{l l}
     unsigned long \textbf{millis()} &  50 days overflow\\
     unsigned long \textbf{micros()}  & 70 min overflow \\
@@ -369,9 +333,7 @@
   \end{tabular}
 }
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \headerbox{Math}{name=math,column=2,below=time}{
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \begin{tabular}{l l l}
     \textbf{min}(x,y) & \textbf{max}(x,y) & \textbf{abs}(x) \\
     \textbf{sin}(rad) & \textbf{cos}(rad) & \textbf{tan}(rad) \\
@@ -384,9 +346,7 @@
   \end{tabular}
 }
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \headerbox{Pseudo Random Numbers}{name=random,column=2,below=math}{
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \begin{tabular}{l}
     \textbf{randomSeed}(seed)  \\
     long \textbf{random}(max)  \\
@@ -394,20 +354,16 @@
   \end{tabular}
 }
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \headerbox{ATmega328 Pinout}{name=pinout,column=2,below=random,bottomaligned=compound}{
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \begin{center}
     \includegraphics[height=0.1655\textheight]{./images/ArduinoImages6.pdf}
   \end{center}
 }
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% COLUMN 3 STARTS HERE
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% COLUMN 4 STARTS HERE
+
 \headerbox{I/O Pins}{name=pins,column=3}{
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{center}
   \begin{tabular}{l l l}
     & \textbf{Uno} &  \textbf{Mega}\\
@@ -421,29 +377,24 @@
 \end{center}
 }
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \headerbox{Analog I/O}{name=analog,column=3,below=pins}{
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \begin{tabular}{l}
     \texttt{\textbf{analogReference}(\texttt{EXTERNAL, INTERNAL})}  \\
     \texttt{\textbf{analogRead}(pin)}  \\
-    \texttt{\textbf{analogWrite}(pin)}  \\
+    \texttt{\textbf{analogWrite}(pin, value)}  \\
   \end{tabular}
 }
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \headerbox{Digital I/O}{name=digital,column=3,below=analog}{
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \begin{tabular}{l}
     \texttt{\textbf{pinMode}(pin,[\texttt{INPUT,OUTPUT}])}  \\
+    \texttt{\textbf{digitalRead}(pin)}  \\
     \texttt{\textbf{digitalWrite}(pin, value)}  \\
-    \texttt{int \textbf{analogRead}(pin)}  \\
   \end{tabular}
 }
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \headerbox{Serial Communication}{name=serial,column=3,below=digital}{
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \begin{tabular}{l}
     \textbf{Serial.begin}(speed)  \\
     \textbf{Serial.print}(``Text'')  \\
@@ -451,9 +402,7 @@
   \end{tabular}
 }
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \headerbox{Websites}{name=websites,column=3,below=serial}{
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \begin{tabular}{l}
     \url{forum.arduino.cc}    \\
     \url{playground.arduino.cc} \\
@@ -461,19 +410,12 @@
   \end{tabular}
 }
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \headerbox{Arduino Uno Board}{name=board,column=3,below=websites,bottomaligned=compound}{
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \begin{center}
     \includegraphics[width=0.95\textwidth]{./images/ArduinoUno_R3_Front.jpg}
   \end{center}
 }
 
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{poster}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \end{document}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
